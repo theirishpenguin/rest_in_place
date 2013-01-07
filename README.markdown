@@ -1,3 +1,7 @@
+Fork's Purpose
+==============
+* To work around https://github.com/janv/rest_in_place/issues/33 ("After R.I.P. submission the updated field is injected into the html without any escaping")
+
 REST in Place
 ===========
                                   _______

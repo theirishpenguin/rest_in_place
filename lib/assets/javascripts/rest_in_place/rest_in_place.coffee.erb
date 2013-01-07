@@ -141,11 +141,12 @@ class RestInPlaceEditor
 
   # Extract the actual attribute value from the servers response
   extractAttributeFromData : (data) ->
+    # Here, we are simply escaping html
     if @include_root_in_json
-      data[@objectName][@attributeName]
+      $('<div/>').text(data[@objectName][@attributeName]).html()
     else
-      data[@attributeName]      
-  
+      $('<div/>').text(data[@attributeName]).html()
+
   # ## Handlers ##############################################################
   
   # Handles the successful response from the server
