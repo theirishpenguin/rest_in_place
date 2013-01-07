@@ -1,6 +1,8 @@
 Fork's Purpose
 ==============
 * To work around https://github.com/janv/rest_in_place/issues/33 ("After R.I.P. submission the updated field is injected into the html without any escaping")
+* To work around https://github.com/janv/rest_in_place/issues/34 ("Truncation on editing a string containing a double quote")
+* Note: No jasmine tests added for either of these issues
 
 REST in Place
 ===========

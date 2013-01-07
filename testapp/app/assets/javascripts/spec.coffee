@@ -59,11 +59,11 @@ describe "Server communication", ->
 
     it "should unwrap the object if include_root_in_json is set", ->
       rip.include_root_in_json = true
-      expect(rip.extractAttributeFromData(person : {age:10})).toEqual(10)
+      expect(rip.extractAttributeFromData(person : {age:10})).toEqual('10')
 
     it "should directly access the attribute if include_root_in_json is not set", ->
       rip.include_root_in_json = false
-      expect(rip.extractAttributeFromData(age:12)).toEqual(12)
+      expect(rip.extractAttributeFromData(age:12)).toEqual('12')
   
   describe "when sending the update", ->
     csrf_metatags = null
