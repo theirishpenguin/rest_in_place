@@ -179,9 +179,10 @@ RestInPlaceEditor.forms =
       @$element.find("form").submit =>
         @update()
         false
+      @$element.find("input").keydown (e) =>
+        @update() if e.keyCode == TAB_KEY
       @$element.find("input").keyup (e) =>
         @abort() if e.keyCode == ESC_KEY
-        @update() if e.keyCode == TAB_KEY
       @$element.find("input").blur => @abort()
     
     getValue : ->
