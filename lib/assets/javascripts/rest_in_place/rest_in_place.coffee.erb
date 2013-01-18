@@ -181,6 +181,7 @@ RestInPlaceEditor.forms =
         false
       @$element.find("input").keyup (e) =>
         @abort() if e.keyCode == ESC_KEY
+        @update() if e.keyCode == TAB_KEY
       @$element.find("input").blur => @abort()
     
     getValue : ->
@@ -203,6 +204,7 @@ RestInPlaceEditor.forms =
 
 # Symbolic representation of the ESC Keycode
 ESC_KEY = 27
+TAB_KEY = 9
 
 # Assign jQuery shortcut
 $ = jQuery
